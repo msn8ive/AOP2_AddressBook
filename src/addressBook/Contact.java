@@ -48,9 +48,11 @@ public class Contact
         newContact.setPhone(phone);
         
         book.add(newContact);
-        
+        System.out.println("-------------------------------------------------------");
         System.out.println("New Contact Added: \n" + newContact.toString());
-        System.out.println("New Contact Added: \n" + book);
+        System.out.println("-------------------------------------------------------");
+        System.out.println("New Contact Added: \n" + book.toString());
+        
 	}
 	
 	public void delete() 
@@ -65,14 +67,18 @@ public class Contact
 	
 	public void display() 
 	{
-		
+		for(int i=0; i<book.size() ; i++) 
+		{
+			System.out.println(i + " " + book.toString());
+			System.out.println(i + " " + book.get(i));
+		}
 	}
 
 	
 	
 	public String toString()
 	{
-		return(this.name+", "+this.streetAddr+", "+this.city+", "+this.state+", "+this.zip+", "+this.phone);
+		return(this.name+", "+this.streetAddr+", "+this.city+", " + this.state + " " + this.zip+", "+this.phone+"\n");
 	}
 	
 	public Scanner getScan() {

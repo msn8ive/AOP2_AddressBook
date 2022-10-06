@@ -38,6 +38,7 @@ public class AddressBookMain {
 
                 case 5:
                     scan.close();
+                    System.out.println("Goodbye");
                     System.exit(0);
                     break;
             }
@@ -45,11 +46,13 @@ public class AddressBookMain {
 	}
 
 	 public static void displayMenu() {
-	        System.out.println("\nWelcome to Your Address Book!");
+		 	System.out.println("-------------------------------------------------------");
+		 	System.out.println("\nWelcome to Your Address Book!");
 	        System.out.println("1. Add a Contact to the Address Book...");
 	        System.out.println("2. Delete a Contact from the Address Book...");
 	        System.out.println("3. Update a Contact from the Address Book...");
 	        System.out.println("4. Display a Contact from the Address Book...");
 	        System.out.println("5. Exit .... ");
+	        System.out.println("-------------------------------------------------------");
 	    }
 }
