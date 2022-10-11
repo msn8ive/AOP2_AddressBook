@@ -1,3 +1,2 @@
-Record Updated->Record updated:Mark	1234 SADF, Nope, RD 12301	232-234-2342
-Record Updated->Max	123 Main St., Fart, FL 12031	234-234-3562
-Record Deleted->Mark	524 Main St., Fart, FL 43210	134123401
+Record Deleted->AJ	1 Main St., Town, ST 52012	2304914091
+Record Deleted->Max	, ,  	

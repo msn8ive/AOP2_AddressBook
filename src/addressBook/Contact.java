@@ -136,8 +136,11 @@ public class Contact
 	{
 		//System.out.println(book.get(1));
 		System.out.println();
-		 for(int i=0; i<book.size(); i++) 
-		 { 	
+		 if (book.isEmpty()){
+			 System.out.println("Address Book Empty");
+			 	 
+		 } else
+		 for(int i=0; i<book.size(); i++) { 	
 			//System.out.println(i + " " + book.toString());
 		 	System.out.println(i + ". " + book.get(i)); 
 		 } 		
