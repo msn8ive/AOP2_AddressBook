@@ -1,6 +1,7 @@
 package addressBook;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Contact 
@@ -12,7 +13,8 @@ public class Contact
 		String state;
 		String zip;
 		String phone;
-		public ArrayList<Contact> book = new ArrayList<Contact>();
+		public ArrayList<Contact> book = new ArrayList<>();
+		
 		
 	public Contact() 
 	{
@@ -22,7 +24,7 @@ public class Contact
 	public void add()
 	{
 		Contact newContact = new Contact();
-
+				
         System.out.println("Please enter contact name...");
         this.name = scan.nextLine();
         newContact.setName(name);
@@ -50,14 +52,30 @@ public class Contact
         book.add(newContact);
         System.out.println("-------------------------------------------------------");
         System.out.println("New Contact Added: \n" + newContact.toString());
-        System.out.println("-------------------------------------------------------");
-        System.out.println("New Contact Added: \n" + book.toString());
-        
+          
 	}
 	
-	public void delete() 
+	public int delete() 
 	{
+		for(int i=0; i<book.size(); i++) 
+		 { 	
+			//System.out.println(i + " " + book.toString());
+		 	System.out.println(i + ". " + book.get(i)); 
+		 }
 		
+		System.out.println("Which contact # would you like to delete? Enter index number:");
+		int byeByeContact = scan.nextInt();
+		
+		deleteContact(byeByeContact);
+		
+		return byeByeContact;
+		
+	}
+	
+	public void deleteContact(int byeByeContact)
+	{
+		System.out.println("Deleting Contact #" + byeByeContact);
+		book.remove(byeByeContact);
 	}
 	
 	public void update() 
@@ -67,18 +85,20 @@ public class Contact
 	
 	public void display() 
 	{
-		for(int i=0; i<book.size() ; i++) 
-		{
-			System.out.println(i + " " + book.toString());
-			System.out.println(i + " " + book.get(i));
-		}
+		//System.out.println(book.get(1));
+		
+		 for(int i=0; i<book.size(); i++) 
+		 { 	
+			//System.out.println(i + " " + book.toString());
+		 	System.out.println(i + ". " + book.get(i)); 
+		 } 		
 	}
 
 	
 	
 	public String toString()
 	{
-		return(this.name+", "+this.streetAddr+", "+this.city+", " + this.state + " " + this.zip+", "+this.phone+"\n");
+		return(this.name+"\t"+this.streetAddr+", "+this.city+", " + this.state + " " + this.zip+"\t"+this.phone);
 	}
 	
 	public Scanner getScan() {

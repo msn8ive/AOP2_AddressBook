@@ -47,7 +47,7 @@ public class AddressBookMain {
 
 	 public static void displayMenu() {
 		 	System.out.println("-------------------------------------------------------");
-		 	System.out.println("\nWelcome to Your Address Book!");
+		 	System.out.println("\t Welcome to Your Address Book!");
 	        System.out.println("1. Add a Contact to the Address Book...");
 	        System.out.println("2. Delete a Contact from the Address Book...");
 	        System.out.println("3. Update a Contact from the Address Book...");
